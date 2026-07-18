@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="../css/contact.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="../index.html">Index</a> |
+                <a href="educations.html">Educations</a> |
+                <a href="experience.html">Experience</a> |
+                <a href="projects.html">Projects</a>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Contact</h1>
+
+    <form method="post" action="#">
+        <fieldset>
+            <legend><strong>Contact</strong></legend>
+            <table>
+
+                <tr>
+                    <td>First Name <span class="required">*</span></td>
+                    <td>
+                        <input type="text" name="firstname">
+                        <span class="error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Last Name <span class="required">*</span></td>
+                    <td>
+                        <input type="text" name="lastname">
+                        <span class="error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender <span class="required">*</span></label></td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <span class="error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email <span class="required">*</span></td>
+                    <td>
+                        <input type="text" name="email">
+                        <span class="error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Reason of Contact <span class="required">*</span></label></td>
+                    <td>
+                        <input type="checkbox" name="reason[]" value="Projects"> Project
+                        <input type="checkbox" name="reason[]" value="Thesis"> Thesis
+                        <input type="checkbox" name="reason[]" value="Job"> Job
+                        <span class="error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Topics <span class="required">*</span></label></td>
+                    <td>
+                        <input type="checkbox" name="topic[]" value="Web Development"> Web Development
+                        <input type="checkbox" name="topic[]" value="Mobile Development"> Mobile Development
+                        <input type="checkbox" name="topic[]" value="AI/ML Development"> AI/ML Development
+                        <span class="error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="consultation">Consultation Date:</label></td>
+                    <td>
+                        <input type="datetime-local" id="consultation" name="consultation" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

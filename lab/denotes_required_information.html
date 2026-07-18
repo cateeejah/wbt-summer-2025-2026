@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Donation Form</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            background-color: #e5e5e5;
+            color: #000;
+            margin: 20px;
+            line-height: 1.2;
+        }
+
+        .req {
+            color: red;
+        }
+
+        .breadcrumb {
+            margin: 10px 0 20px 0;
+            font-size: 12px;
+        }
+
+        h2 {
+            color: red;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 18px 0 8px 0;
+            padding: 0;
+        }
+
+        .row {
+            display: flex;
+            margin-bottom: 2px;
+            align-items: flex-start;
+        }
+
+        .label {
+            width: 230px;
+            text-align: right;
+            font-weight: bold;
+            padding-right: 6px;
+            padding-top: 3px;
+        }
+
+        .label-sub {
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 1.1;
+        }
+
+        .field {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding-top: 1px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            border: 1px solid #7F9DB9;
+            padding: 2px 3px;
+            margin: 0;
+        }
+
+        input[type="text"] {
+            width: 250px;
+            height: 14px;
+        }
+
+        input[type="text"].focused {
+            border: 2px solid #7ea6d9;
+            padding: 1px 2px;
+        }
+
+        input[type="text"].short {
+            width: 50px;
+        }
+
+        select {
+            padding: 1px;
+            height: 19px;
+        }
+
+        textarea {
+            width: 340px;
+            height: 60px;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 20px;
+        }
+
+        .radio-group input {
+            margin: 0 2px 0 3px;
+            vertical-align: middle;
+        }
+
+        .vertical-radios {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .vertical-radios label {
+            display: flex;
+            align-items: center;
+        }
+
+        .vertical-radios input {
+            margin: 0 4px 0 0;
+        }
+
+        .checkbox-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .checkbox-list label {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checkbox-list input {
+            margin: 1px 5px 0 0;
+        }
+
+        .full-width {
+            margin: 5px 0 5px 0;
+        }
+
+        .gray-text {
+            color: #888;
+        }
+
+        .inline-flex {
+            display: flex;
+            align-items: center;
+        }
+
+        .buttons-container {
+            padding-left: 236px;
+            margin-top: 10px;
+        }
+
+        button {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            padding: 1px 12px;
+            border-radius: 12px;
+            border: 1px solid #555;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            margin-right: 2px;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        .lock-icon {
+            font-size: 12px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <span class="req">*</span> - Denotes Required Information
+    </div>
+
+    <div class="breadcrumb">
+        <b>> 1 Donation</b> &nbsp; > 2 Confirmation &nbsp; > Thank You!
+    </div>
+
+    <h2>Donor Information</h2>
+
+    <div class="row">
+        <div class="label">First Name<span class="req">*</span></div>
+        <div class="field"><input type="text" class="focused" value="" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Last Name<span class="req">*</span></div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Company</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Address 1<span class="req">*</span></div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Address 2</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">City<span class="req">*</span></div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">State<span class="req">*</span></div>
+        <div class="field">
+            <select style="width: 130px;">
+                <option>Select a State</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="label">Zip Code<span class="req">*</span></div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Country<span class="req">*</span></div>
+        <div class="field">
+            <select style="width: 258px;">
+                <option>Select a Country</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="label">Phone</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Fax</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Email<span class="req">*</span></div>
+        <div class="field"><input type="text" /></div>
+    </div>
+
+    <div class="row">
+        <div class="label">
+            Donation Amount<span class="req">*</span><br>
+            <span class="label-sub">(Check a button or type in your<br>amount)</span>
+        </div>
+        <div class="field radio-group">
+            <input type="radio" name="amt" checked> None
+            <input type="radio" name="amt"> $50
+            <input type="radio" name="amt"> $75
+            <input type="radio" name="amt"> $100
+            <input type="radio" name="amt"> $250
+            <input type="radio" name="amt"> Other
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="label">Other Amount $</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+
+    <div class="row">
+        <div class="label">
+            Recurring Donation<br>
+            <span class="label-sub">(Check if yes)</span>
+        </div>
+        <div class="field" style="flex-direction: column; gap: 4px;">
+            <div class="inline-flex">
+                <input type="checkbox" style="margin: 0 5px 0 0;"> I am interested in giving on a regular basis.
+            </div>
+            <div>
+                Monthly Credit Card $ <input type="text" class="short" /> For <input type="text" class="short" /> Months
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Honorarium and Memorial Donation Information</h2>
+
+    <div class="row">
+        <div class="label">I would like to make this<br>donation</div>
+        <div class="field vertical-radios">
+            <label><input type="radio" name="honor"> To Honor</label>
+            <label><input type="radio" name="honor"> In Memory of</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="label">Name</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Acknowledge Donation to</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">Address</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">City</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+    <div class="row">
+        <div class="label">State</div>
+        <div class="field">
+            <select style="width: 130px;">
+                <option>Select a State</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="label">Zip</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+
+
+    <h2>Additional Information</h2>
+
+    <div class="full-width">
+        Please enter your name, company or organization as you would like it to appear in our publications:
+    </div>
+
+    <div class="row">
+        <div class="label">Name</div>
+        <div class="field"><input type="text" /></div>
+    </div>
+
+    <div class="row">
+        <div class="label"></div>
+        <div class="field checkbox-list">
+            <label><input type="checkbox"> I would like my gift to remain anonymous.</label>
+            <label><input type="checkbox"> My employer offers a matching gift program. I will mail the matching gift
+                form.</label>
+            <label><input type="checkbox"> Please save the cost of acknowledging this gift by not mailing a thank you
+                letter.</label>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 5px;">
+        <div class="label">
+            Comments<br>
+            <span class="label-sub">(Please type any questions or feedback<br>here)</span>
+        </div>
+        <div class="field"><textarea></textarea></div>
+    </div>
+
+    <div class="row" style="margin-top: 5px;">
+        <div class="label">How may we contact you?</div>
+        <div class="field checkbox-list">
+            <label><input type="checkbox"> E-mail</label>
+            <label><input type="checkbox"> Postal Mail</label>
+            <label><input type="checkbox"> Telephone</label>
+            <label><input type="checkbox"> Fax</label>
+        </div>
+    </div>
+
+    <div class="full-width gray-text" style="margin-top: 5px;">
+        I would like to receive newsletters and information about special events by:
+    </div>
+
+    <div class="row">
+        <div class="label"></div>
+        <div class="field checkbox-list">
+            <label><input type="checkbox"> E-mail</label>
+            <label><input type="checkbox"> Postal Mail</label>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 5px;">
+        <div class="label"></div>
+        <div class="field inline-flex">
+            <input type="checkbox" style="margin: 0 5px 0 0;"> I would like information about volunteering with the
+            <span style="background-color: #ddd; color: #ddd; margin-left: 5px;">[Redacted Name]</span>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <button type="button">Reset</button>
+        <button type="button">Continue</button>
+    </div>
+
+    <div class="footer">
+        <span class="lock-icon">🔒</span> Donate online with confidence. You are on a secure server.<br><br>
+        If you have any problems or questions, please contact <span
+            style="color: #ccc; background-color: #eee;">support</span>.
+    </div>
+
+</body>
+
+</html>
