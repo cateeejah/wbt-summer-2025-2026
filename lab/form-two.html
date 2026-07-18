@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        :root {
+            --primary-blue: #233784;
+            --bg-color: #f8f9fa;
+            --border-color: #cbd5e1;
+            --text-dark: #1e293b;
+            --placeholder-gray: #a1a1aa;
+            --placeholder-blue: #8ba3cc;
+        }
+
+        body {
+            background-color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-card {
+            background-color: var(--bg-color);
+            width: 100%;
+            max-width: 440px;
+            padding: 40px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .header h1 {
+            font-family: 'Merriweather', serif;
+            color: var(--primary-blue);
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+        }
+
+        .header p {
+            font-family: 'Merriweather', serif;
+            color: #475569;
+            font-size: 14px;
+            margin: 0 0 16px 0;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: var(--primary-blue);
+            width: 100%;
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background-color: #ffffff;
+            font-family: 'Merriweather', serif;
+            font-size: 15px;
+            color: #333333;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group input::placeholder {
+            color: var(--placeholder-gray);
+        }
+
+        .date-input::placeholder {
+            color: var(--placeholder-blue);
+        }
+
+        .date-input {
+            color: var(--placeholder-blue) !important;
+        }
+
+        .select-wrapper {
+            position: relative;
+        }
+
+        .form-group select {
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        .select-wrapper::after {
+            content: '▼';
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            color: var(--primary-blue);
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: inner-spin-button;
+            opacity: 1;
+        }
+
+        .actions {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .btn {
+            padding: 14px 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-submit {
+            flex: 3;
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-reset {
+            flex: 1;
+            background-color: #ffffff;
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-card">
+        <div class="header">
+            <h1>Registration</h1>
+            <p>Please complete all fields below.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <form>
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Nabeeha Taiyeba">
+            </div>
+
+            <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="number" id="postalCode" placeholder="10001">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="text" id="dob" class="date-input" placeholder="25 / 06 / 2026">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="nabeeha@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="••••••••">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <div class="select-wrapper">
+                    <select id="country">
+                        <option value="" disabled selected hidden>Select a country...</option>
+                        <option value="bd">Bangladesh</option>
+                        <option value="us">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                        <option value="au">Australia</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn btn-submit">Submit</button>
+                <button type="reset" class="btn btn-reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

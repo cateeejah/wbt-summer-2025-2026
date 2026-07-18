@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Workspace</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e5e5e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            background-color: #121c3b;
+            padding: 32px 32px 24px 32px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            color: #8da4d0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .badge .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #4b88ff;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .card-header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .card-body {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .form-group input {
+            background-color: #f1f5f9;
+            border: none;
+            padding: 14px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #334155;
+            font-family: 'Inter', sans-serif;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .form-group input::placeholder {
+            color: #94a3b8;
+        }
+
+        .form-group input[type="date"] {
+            color: #94a3b8;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #4b88ff;
+        }
+
+        .date-input-placeholder {
+            color: #83a5da !important;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkbox-item input[type="checkbox"]:checked {
+            background-color: #3b82f6;
+            border-color: #3b82f6;
+        }
+
+        .checkbox-item input[type="checkbox"]:checked::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            margin-bottom: 2px;
+        }
+
+        .checkbox-item span {
+            font-size: 13px;
+            color: #475569;
+            font-weight: 500;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .btn {
+            padding: 14px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: #3b82f6;
+            color: #ffffff;
+            flex: 1;
+        }
+
+        .btn-secondary {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            padding: 14px 24px;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="badge">
+                <span class="dot"></span> GET STARTED
+            </div>
+            <h1>Create your workspace</h1>
+        </div>
+
+        <div class="card-body">
+            <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" placeholder="Nabeeha Taiyeba">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="number" id="phone" placeholder="019********">
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of birth</label>
+                <input type="text" id="dob" class="date-input-placeholder" placeholder="25/06/2026">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Work email</label>
+                <input type="email" id="email" placeholder="nabeeha@company.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="At least 8 characters">
+            </div>
+
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <span>Email me product updates and tips</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span>I agree to the Terms & Privacy Policy</span>
+                </label>
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn btn-primary">Create workspace</button>
+                <button type="button" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
